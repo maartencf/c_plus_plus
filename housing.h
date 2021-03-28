@@ -30,7 +30,7 @@ class Appartment : public Housing {
         Appartment();
         Appartment(int area, std::string owner, char *city, int floorNumber);
         ~Appartment() = default;
-        std::string Summary();
+        std::string Summary() override;
 };
 
 class Villa : public Housing {
@@ -41,7 +41,7 @@ class Villa : public Housing {
         Villa();
         Villa(int area, std::string owner, char *city, int areaGarden);
         ~Villa() = default;
-        std::string Summary();
+        std::string Summary() override;
 };
 
 #endif /* HOUSING_HPP */

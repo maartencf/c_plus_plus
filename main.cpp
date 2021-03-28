@@ -18,7 +18,7 @@ int main() {
     vector<short> ages = {110, 90, 84};
 
     Housing* appartment;
-    char cityName[]  = "KBH SV";
+    char cityName[] = "KBH SV";
     appartment = new Appartment(60, "Last name", cityName, 1);
     appartment->SetAgesOfInhabitants(ages);
     appartment->showAges();
