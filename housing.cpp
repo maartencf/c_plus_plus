@@ -1,9 +1,10 @@
-#include <string>
-#include <vector>
 #include <bits/stdc++.h>
 #include <iostream>
 #include "housing.h"
-using namespace std;
+
+using std::vector;
+using std::cout;
+using std::to_string;
 
 Housing::Housing(int area, string owner, char *city) {
     Area = area;

@@ -1,8 +1,11 @@
 #include <string>
 #include <iostream>
+#include <vector>
 #include "housing.h"
 
-using namespace std;
+using std::cout;
+using std::endl;
+using std::string;
 
 // This is just a small program that I wrote while learning C++.
 // Comments are more than welcome!
@@ -10,12 +13,13 @@ using namespace std;
 int main() {
     Housing* office;
     char townName[] = "Copenhagen";
+    string owner = "Company name";
     char *townPtr = townName;
-    office = new Housing(600, "Company name", townPtr);
+    office = new Housing(600, owner, townPtr);
     cout << office->Summary() << '\n';
     delete office;
 
-    vector<short> ages = {110, 90, 84};
+    std::vector<short> ages = {110, 90, 84};
 
     Housing* appartment;
     char cityName[] = "KBH SV";

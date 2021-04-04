@@ -1,22 +1,21 @@
 #ifndef HOUSING_HPP
 #define HOUSING_HPP
 
-#include <vector>
-#include <string>
+using std::string;
 
 class Housing {
     private:
         int Area;
-        std::string Owner;
+        string Owner;
         char *City;
         std::vector<short> agesOfInhabitants;
           
     public:
         Housing() = default;
-        Housing(int area, std::string owner, char *city);
+        Housing(int area, string owner, char *city);
         Housing(const Housing&); // copy constructor (not used)
         ~Housing() = default;
-        virtual std::string Summary();
+        virtual string Summary();
         void SetAgesOfInhabitants(const std::vector<short> &listOfAges);
         std::vector<short> GetAgesOfInhabitants();
         void showAges();
@@ -28,9 +27,9 @@ class Appartment : public Housing {
     
     public:
         Appartment();
-        Appartment(int area, std::string owner, char *city, int floorNumber);
+        Appartment(int area, string owner, char *city, int floorNumber);
         ~Appartment() = default;
-        std::string Summary() override;
+        string Summary() override;
 };
 
 class Villa : public Housing {
@@ -39,9 +38,9 @@ class Villa : public Housing {
 
     public:
         Villa();
-        Villa(int area, std::string owner, char *city, int areaGarden);
+        Villa(int area, string owner, char *city, int areaGarden);
         ~Villa() = default;
-        std::string Summary() override;
+        string Summary() override;
 };
 
 #endif /* HOUSING_HPP */
